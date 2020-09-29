@@ -1,0 +1,42 @@
+{"slider":[
+	{
+		"image": "1.jpg",
+		"text": {
+			"h1": "Title 1",
+			"p": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+		},
+		"url": "http://itstep.az"
+	},
+	{
+		"image": "2.jpg",
+		"text": {
+			"h1": "Title 2",
+			"p": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+		},
+		"url": "http://facebok.com"
+	},
+	{
+		"image": "3.jpg",
+		"text": {
+			"h1": "Title 3",
+			"p": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+		},
+		"url": "https://youtube.com"
+	},
+	{
+		"image": "4.jpg",
+		"text": {
+			"h1": "Title 4",
+			"p": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		},
+		"url": "http://president.az"
+	},
+	{
+		"image": "5.jpg",
+		"text": {
+			"h1": "Title 5",
+			"p": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+		},
+		"url": "https://getbootstrap.com/"
+	}
+]}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Slider exam</title>
+		<link rel="stylesheet" href="slider.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="slider"><div id="slide"></div>
+			
+		</div>
+		
+		<script>
+			$(document).ready(()=>{
+				let slider = $("#slider");
+				let slide = $("#slide");
+				let buttons	 = $("buttons");
+				let obj;
+				let n = 0;
+				let kod = "";
+				let text;
+				let next = document.getElementById("next");
+				
+				
+				
+				function show(text) {
+					obj = JSON.parse(text);
+					
+					kod += '<img src=img/'+ obj.slider[n].image +' />';
+					kod += '<h1>' + obj.slider[n].text.h1 + '</h1>';
+					kod += '<p>' + obj.slider[n].text.p + '</p>';
+					kod += '<div id="buttons"><button id="prev"><</button><button class="button">1</button><button class="button">2</button><button class="button">3</button><button class="button">4</button class="button"><button class="button">5</button><button id="next">></button></div>';
+					slide.html(kod);
+					
+					$("p").css({top: slide.height()/1.8 + "px"})
+					
+					$(".button").click(function() {
+						n = $(this).index()-1;
+						show(text);
+					})
+						$("#prev").click(function (){
+						n-1;
+						show(text)
+					})
+				
+					$("#next").click(function (){
+						n+1;
+						show(text);
+					})
+					
+				
+					}
+					function nextSlider() {
+						
+						n+1;show(text);
+					}
+					loadTest();
+				function loadTest() {
+					let ajax = new XMLHttpRequest();
+					ajax.open("GET", "slider.json");
+					ajax.send();
+					ajax.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							show(this.responseText);
+						}
+					}; 
+				}
+				
+			})
+		
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
